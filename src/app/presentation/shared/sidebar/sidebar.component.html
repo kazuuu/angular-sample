@@ -1,0 +1,13 @@
+<div class="vs-sidebar ">
+  <a class="active" href="#home">Home</a>
+  <a (click)="PostCollapse.toggle()">Post</a>
+  <div #PostCollapse="ngbCollapse" [(ngbCollapse)]="isPostCollapsed">
+    <a [routerLink]="['postlist']">Listar Posts</a>
+    <a [routerLink]="['postform']">Criar Post</a>
+  </div>
+  <a (click)="ChatCollapse.toggle()">Chat</a>
+  <div #ChatCollapse="ngbCollapse" [(ngbCollapse)]="isChatCollapsed">
+    <a [routerLink]="['chatlist']">Exibir Conversas</a>
+    <a [routerLink]="['chatinvitations']">Convites</a>
+  </div>
+</div>
